@@ -1,0 +1,215 @@
+*{
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  body{
+    background-color: #0f1923;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .container-input{
+    max-width: 480px;
+    margin: 14px 0;
+  }
+  
+  .container-input span {
+    color: #FFF;
+    font-size: 22px;
+  }
+  
+  .slider {
+    margin-top: 8px;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 18px;
+    border-radius: 5px;  
+    background: #DFDFDF;
+    outline: none;
+    opacity: 0.7;
+  }
+  
+  .button {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background: none;
+    color: #0f1923;
+    cursor: pointer;
+    position: relative;
+    padding: 8px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all .15s ease;
+  }
+  
+  .button::before,
+  .button::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: calc(50% - 5px);
+    border: 1px solid #7D8082;
+    transition: all .15s ease;
+  }
+  
+  .button::before {
+    top: 0;
+    border-bottom-width: 0;
+  }
+  
+  .button::after {
+    bottom: 0;
+    border-top-width: 0;
+  }
+  
+  .button:active,
+  .button:focus {
+    outline: none;
+  }
+  
+  .button:active::before,
+  .button:active::after {
+    right: 3px;
+    left: 3px;
+  }
+  
+  .button:active::before {
+    top: 3px;
+  }
+  
+  .button:active::after {
+    bottom: 3px;
+  }
+  
+  .button_lg {
+    position: relative;
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #0f1923;
+    overflow: hidden;
+    box-shadow: inset 0px 0px 0px 1px transparent;
+  }
+  
+  .button_lg::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    background-color: #0f1923;
+  }
+  
+  .button_lg::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 4px;
+    height: 4px;
+    background-color: #0f1923;
+    transition: all .2s ease;
+  }
+  
+  .button_sl {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: -1px;
+    left: -8px;
+    width: 0;
+    background-color: #ff4655;
+    transform: skew(-15deg);
+    transition: all .2s ease;
+  }
+  
+  .button_text {
+    position: relative;
+  }
+  
+  .button:hover {
+    color: #0f1923;
+  }
+  
+  .button:hover .button_sl {
+    width: calc(100% + 15px);
+  }
+  
+  .button:hover .button_lg::after {
+    background-color: #fff;
+  }
+  
+  
+  .container-password{
+    max-width: 480px;
+    margin: 14px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .title{
+    text-align: center;
+    color: #FFF;
+    font-size: 28px;
+    margin-top: 24px;
+    margin-bottom: 8px;
+  } 
+  
+  .password{
+    height: 60px;
+    background-color: rgba(0,0,0,0.40);
+    border: 1px solid #ff4655;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    border-radius: 4px;
+    transition: transform 0.5s;
+  }
+  .password:hover{
+    transform: scale(1.05);
+    border-color: #FFF;
+  }
+  
+  .hide{
+    display: none;
+  }
+  
+  .tooltip{
+    color: #FFF;
+    position: relative;
+    top: 20px;
+    padding: 6px 8px;
+    font-size: 16px;
+    border-radius: 6px;
+    background: rgb(15, 15, 15);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s ease-in-out;
+    text-align: center;
+  }
+  
+  .container-password:hover .tooltip{
+    bottom: 50px;
+    visibility: visible;
+    opacity: 1;
+  }
